@@ -8,9 +8,119 @@
     z-index: 99;
 }
 
+.section-wrapper {
+  background-color: #f0f9f8;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.section-wrapper h2 {
+  color: #15146c;
+  font-weight: 700;
+}
+
+.section-wrapper p.subtitle {
+  color: #5a6f68;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: inline-flex;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background-color: #15146c;
+  color: white;
+}
+
+.tab-content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h3 {
+  color: #15146c;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tab-content p {
+  color: #5a6f68;
+  line-height: 1.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profil-section {
+  padding: 2rem;
+}
+
+.profil-section h2 {
+  font-weight: 800;
+  color: #000000; /* hijau tua elegan */
+  margin-bottom: 1rem;
+}
+
+.profil-section p {
+  font-size: 1.05rem;
+  line-height: 1.9; /* jarak antar baris lebih lega */
+  color: #555; /* warna teks abu gelap */
+  margin-bottom: 1rem; /* jarak antar paragraf */
+}
+
 .fw-medium {
     font-weight: 500;
 }
+
+.logo-link {
+    display: flex;           /* supaya mudah memposisikan */
+    justify-content: center; /* posisi horizontal tengah */
+    align-items: center;     /* posisi vertical tengah kalau parent punya tinggi */
+    text-align: center;
+}
+
+.logo-img {
+    height: 80px;  /* ukuran default */
+    width: auto;    /* biar proporsional */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 50px;
+    }
+}
+
 
 
 /*** Spinner ***/
