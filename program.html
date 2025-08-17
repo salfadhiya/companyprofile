@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program Pelatihan - BBPVP Bandung</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="program pelatihan, PBL, PBK, project based learning, pelatihan berbasis kompetensi" name="keywords">
+    <meta content="Program pelatihan unggulan BBPVP Bandung: Project-Based Learning (PBL) dan Pelatihan Berbasis Kompetensi (PBK)" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Red+Rose:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Program Page Specific Styles -->
+    <style>
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: #15146c;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .program-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-icon {
+            width: 80px;
+            height: 80px;
+            background: #15146c;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover .program-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .program-features {
+            background: #15146c;
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .timeline-section {
+            background: #15146c;
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 20px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .facility-item {
+            background: #15146c;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .facility-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .registration-alert {
+            background: white;
+            color: #dc3545;
+            border: 2px solid #dc3545;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .registration-alert .btn {
+            background: #dc3545;
+            border-color: #dc3545;
+            color: white;
+        }
+
+        .registration-alert .btn:hover {
+            background: #bb2d3b;
+            border-color: #bb2d3b;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .program-stats {
+            background: #15146c;
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            margin-bottom: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .btn-register {
+            background: #15146c;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-register:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .requirements-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            color: #664d03;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .program-card {
+                margin-bottom: 30px;
+            }
+            
+            .facility-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 d-none d-lg-flex">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <nav class="breadcrumb mb-0"></nav>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Brand Start -->
+    <div class="container-fluid bg-white text-brand pt-4 pb-5 d-none d-lg-flex">
+        <div class="container pb-2">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo.png" alt="BBPVP Bandung Logo" class="logo-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Brand End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <img src="img/logo.png" alt="BBPVP Bandung Logo" style="height: 60px;">
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link">Beranda</a>
+                        <a href="about.html" class="nav-item nav-link">Tentang</a>
+                        <a href="program.html" class="nav-item nav-link active">Program</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
+                            <div class="dropdown-menu bg-light m-0">
+                                <a href="feature.html" class="dropdown-item">Pelatihan Otomotif</a>
+                                <a href="team.html" class="dropdown-item">Pelatihan Manufaktur</a>
+                                <a href="testimonial.html" class="dropdown-item">Pelatihan Refrigerasi</a>
+                                <a href="appoinment.html" class="dropdown-item">Pelatihan TIK</a>
+                                <a href="404.html" class="dropdown-item">Sertifikasi</a>
+                            </div>
+                        </div>
+                        <a href="article.html" class="nav-item nav-link">Artikel</a>
+                    </div>
+                    <div class="ms-auto d-none d-lg-flex">
+                        <a class="btn btn-sm-square btn-primary ms-2" 
+                        href="https://www.instagram.com/bbpvp_bandung/?hl=en" 
+                        target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-sm-square btn-primary ms-2" 
+                        href="https://www.youtube.com/@bbpvp_bandung295" 
+                        target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="btn btn-sm-square btn-primary ms-2" 
+                        href="https://www.tiktok.com/@bbpvp_bandung" 
+                        target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5 mt-4">
+            <h1 class="display-2 text-white mb-3 animated slideInDown">Program Pelatihan</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item text-white" aria-current="page">Program</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Program Overview Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Program Pelatihan BBPVP Bandung</h1>
+                <p class="mb-5">BBPVP Bandung menyediakan dua program pelatihan unggulan yang dirancang khusus untuk mempersiapkan tenaga kerja yang kompeten dan siap menghadapi tantangan industri 4.0. Kedua program ini mengombinasikan pembelajaran teori dan praktik dengan pendekatan yang inovatif.</p>
+            </div>
+            
+            <!-- Registration Alert -->
+            <div class="alert registration-alert wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row align-items-center">
+                    <div class="col-lg-9">
+                        <h4 class="mb-2"><i class="fas fa-fire me-2"></i>PENDAFTARAN SEDANG DIBUKA!</h4>
+                        <p class="mb-0">Jangan lewatkan kesempatan emas untuk mengikuti program pelatihan terbaik di BBPVP Bandung. Kuota terbatas!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Program Overview End -->
+
+    <!-- Main Programs Start -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <!-- PBL Program -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="mb-3">Project-Based Learning (PBL)</h3>
+                        <p class="mb-4">Program pelatihan berbasis proyek nyata yang menggabungkan pembelajaran teori dengan aplikasi praktis di industri. Peserta akan terlibat langsung dalam pengembangan proyek yang relevan dengan kebutuhan industri 4.0.</p>
+                        
+                        <div class="program-features">
+                            <h5 class="mb-3 text-white">Program yang Tersedia:</h5>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-car text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Smart Automotive
+                                    <p class="mb-0 small opacity-75">Memodifikasi kendaraan konvensional dengan sistem kendali jarak jauh</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-map-marked-alt text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Smart Tourism
+                                    <p class="mb-0 small opacity-75">Membuat sistem informasi pariwisata berbasis website</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-seedling text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Smart Farming
+                                    <p class="mb-0 small opacity-75">Hydroponic Automation System & Smart Irrigation Management</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-code text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Smart Creative IT Skills
+                                    <p class="mb-0 small opacity-75">Web Development, AI Tools, Content Creation & Digital Marketing</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-industry text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Smart Manufacturing
+                                    <p class="mb-0 small opacity-75">Quality Control Vision Sensor & Predictive Maintenance</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-building text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Smart Building
+                                    <p class="mb-0 small opacity-75">Pemasangan sistem integrasi bangunan cerdas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-section">
+                            <h5 class="mb-3 text-center text-white">Timeline PBL Tahap 2</h5>
+                            <div class="feature-item">
+                                Pendaftaran: 7 - 18 Agustus 2025
+                            </div>
+                            <div class="feature-item">
+                                Sharing Session: 11 Agustus 2025
+                            </div>
+                            <div class="feature-item">
+                                Assessment: 19 - 22 Agustus 2025
+                            </div>
+                            <div class="feature-item">
+                                Pengumuman: 25 Agustus 2025
+                            </div>
+                            <div class="feature-item">
+                                Mulai Pelatihan: 1 September 2025
+                            </div>
+                        </div>
+
+                        <div class="facility-grid">
+                            <div class="facility-item">Asuransi Pelatihan</div>
+                            <div class="facility-item">Uang Saku Pelatihan</div>
+                            <div class="facility-item">Uang Saku OJT</div>
+                            <div class="facility-item">Paket Data</div>
+                            <div class="facility-item">Konsumsi</div>
+                            <div class="facility-item">Pakaian Kerja</div>
+                            <div class="facility-item">Modul Pelatihan</div>
+                            <div class="facility-item">Asuransi OJT</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PBK Program -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="mb-3">Pelatihan Berbasis Kompetensi (PBK)</h3>
+                        <p class="mb-4">Program pelatihan gratis yang dirancang khusus untuk fresh graduate dan pencari kerja. Fokus pada pengembangan kompetensi teknis yang dibutuhkan dunia industri dengan sertifikasi yang diakui.</p>
+                        
+                        <div class="program-features">
+                            <h5 class="mb-3 text-white">Program per Kejuruan:</h5>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-wrench text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Otomotif
+                                    <p class="mb-0 small opacity-75">Car Inspector, Service Motor & Mobil, Forklift, Autodetailing, Baterai Pack</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cogs text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Manufaktur
+                                    <p class="mb-0 small opacity-75">Mesin Bubut, Mesin Frais, CNC Milling & Bubut</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-laptop text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    TIK
+                                    <p class="mb-0 small opacity-75">Drone Videography, Desain Grafis, Fashion Illustrator</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-snowflake text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Refrigerasi
+                                    <p class="mb-0 small opacity-75">Perawatan AC Rumah Tangga</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-utensils text-white" style="font-size: 12px;"></i>
+                                </div>
+                                <div>
+                                    Pariwisata
+                                    <p class="mb-0 small opacity-75">Basic Barista</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-section">
+                            <h5 class="mb-3 text-center text-white">Timeline PBK Tahap 2</h5>
+                            <div class="feature-item">
+                                Pendaftaran: 24 Juni - 03 Juli 2025
+                            </div>
+                            <div class="feature-item">
+                                Tes Tulis: 04 Juli 2025
+                            </div>
+                            <div class="feature-item">
+                                Tes Wawancara: 07 Juli 2025
+                            </div>
+                            <div class="feature-item">
+                                Pengumuman: 08 Juli 2025
+                            </div>
+                            <div class="feature-item">
+                                Mulai Pelatihan: 14 Juli 2025
+                            </div>
+                        </div>
+
+                        <div class="facility-grid">
+                            <div class="facility-item">Uang Saku</div>
+                            <div class="facility-item">Makan Siang</div>
+                            <div class="facility-item">Seragam Pelatihan</div>
+                            <div class="facility-item">Modul Pelatihan</div>
+                            <div class="facility-item">Sertifikat Pelatihan</div>
+                        </div>
+
+                        <div class="requirements-box">
+                            <h6 class="mb-2">Syarat Peserta:</h6>
+                            <ul class="mb-0 small">
+                                <li>Pencari kerja berusia minimal 18 tahun</li>
+                                <li>Memiliki akun SIAPkerja</li>
+                                <li>Tidak sedang menempuh pendidikan/bekerja</li>
+                                <li>Memiliki motivasi tinggi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Programs End -->
+
+    <!-- Program Statistics -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="program-stats wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-toggle="counter-up">2</span>
+                            <span>Program Unggulan</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-toggle="counter-up">25</span>
+                            <span>Kelas Tersedia</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-toggle="counter-up">1000</span>
+                            <span>Kuota Peserta</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-toggle="counter-up">80</span>
+                            <span>Jam Pelajaran</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="container-fluid py-5 mb-5 bg-light">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="text-dark mb-4">Siap Mengembangkan Kariermu?</h2>
+                    <p class="text-dark mb-4">Bergabunglah dengan ribuan alumni sukses BBPVP Bandung. Dapatkan pelatihan berkualitas, sertifikasi resmi, dan peluang karier yang cemerlang di industri 4.0.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="https://s.id/daftarPBLbbpvpbdg" class="btn-register btn-dark " target="_blank">
+                            <i class="fas fa-project-diagram me-2"></i>Daftar PBL
+                        </a>
+                        <a href="https://bit.ly/PBKReg1_BDG2025" class="btn-register btn-dark " target="_blank">
+                            <i class="fas fa-certificate me-2"></i>Daftar PBK
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <small class="text-dark-50">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Kuota terbatas! Daftar sekarang sebelum kehabisan tempat.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer position-relative bg-dark text-white-50 py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-6 pe-lg-5">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo-white.png" alt="" style="height: 150px; margin-bottom: 50px;">
+                    </a>
+                    <p class="fs-5 mb-4">Balai Besar Pelatihan Vokasi dan Produktivitas Bandung - Kementerian Ketenagakerjaan Republik Indonesia. Mengembangkan kompetensi tenaga kerja Indonesia melalui pelatihan berkualitas.</p>
+                    <p><i class="fa fa-map-marker-alt me-2"></i>Jl. Gatot Subroto No.170</p>
+                    <p><i class="fa fa-phone-alt me-2"></i>(022) 4264265</p>
+                    <p><i class="fa fa-envelope me-2"></i>info@bbpvpbandung.kemnaker.go.id</p>
+                    <div class="d-flex mt-4">
+                        <a class="btn btn-lg-square btn-primary me-2" href="https://www.instagram.com/bbpvp_bandung/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-lg-square btn-primary me-2" href="https://www.youtube.com/@bbpvp_bandung295" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-lg-square btn-primary me-2" href="https://www.tiktok.com/@bbpvp_bandung" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="row g-5">
+                        <div class="col-sm-6">
+                            <h4 class="text-light mb-4">Link Cepat</h4>
+                            <a class="btn btn-link" href="index.html">Beranda</a>
+                            <a class="btn btn-link" href="about.html">Tentang Kami</a>
+                            <a class="btn btn-link" href="program.html">Program Pelatihan</a>
+                            <a class="btn btn-link" href="article.html">Artikel & Berita</a>
+                            <a class="btn btn-link" href="#">Kontak</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4 class="text-light mb-4">Program Populer</h4>
+                            <a class="btn btn-link" href="#pbl">Project-Based Learning</a>
+                            <a class="btn btn-link" href="#pbk">Pelatihan Berbasis Kompetensi</a>
+                            <a class="btn btn-link" href="#">Smart Automotive</a>
+                            <a class="btn btn-link" href="#">Smart Manufacturing</a>
+                            <a class="btn btn-link" href="#">Sertifikasi Profesi</a>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4 class="text-light mb-4">Newsletter</h4>
+                            <div class="w-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-0 py-3 px-4" style="background: rgba(255, 255, 255, .1);" placeholder="Alamat Email Anda">
+                                    <button class="btn btn-primary px-4">Berlangganan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; <a href="index.html">BBPVP Bandung</a>. Hak Cipta Dilindungi.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Kementerian Ketenagakerjaan Republik Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Program Page Specific JavaScript -->
+    <script>
+        // Smooth scroll untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Counter animation untuk statistik
+        const observerOptions = {
+            threshold: 0.7
+        };
+
+
+        // Observe the statistics section
+        const statsSection = document.querySelector('.program-stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Add animation delay untuk program cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            programCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+
+        // Registration alert pulse animation
+        const registrationAlert = document.querySelector('.registration-alert');
+        if (registrationAlert) {
+            setInterval(() => {
+                registrationAlert.classList.add('pulse');
+                setTimeout(() => {
+                    registrationAlert.classList.remove('pulse');
+                }, 1000);
+            }, 5000);
+        }
+
+        // Feature items hover effect
+        document.querySelectorAll('.feature-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            });
+        });
+
+        // Timeline items interaction
+        document.querySelectorAll('.feature-item').forEach((item, index) => {
+            item.addEventListener('click', function() {
+                this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                setTimeout(() => {
+                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                }, 2000);
+            });
+        });
+
+        // Facility grid animation on scroll
+        const facilityObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const facilityItems = entry.target.querySelectorAll('.facility-item');
+                    facilityItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll('.facility-grid').forEach(grid => {
+            // Set initial state
+            grid.querySelectorAll('.facility-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'all 0.5s ease';
+            });
+            facilityObserver.observe(grid);
+        });
+
+
+        // Loading animation untuk register buttons
+        document.querySelectorAll('.btn-register').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Memproses...';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.disabled = false;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
