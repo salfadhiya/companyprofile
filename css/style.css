@@ -1,5 +1,196 @@
 /********** Template CSS **********/
+/* Visi Misi Container - Warna Terbalik dari Service */
+.container-visi-misi {
+    position: relative;
+    background: var(--bs-primary); /* Primary blue (kebalikan dari service yang light) */
+    color: var(--bs-white);
+    padding: 80px 0;
+}
 
+.container-visi-misi::before {
+    position: absolute;
+    content: '';
+    background: var(--bs-dark); /* Dark clip-path (kebalikan dari light) */
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%); /* Sama seperti service */
+    z-index: -1;
+}
+
+.container-visi-misi h1 {
+    color: var(--bs-white);
+    margin-bottom: 1rem;
+}
+
+.container-visi-misi .subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Tab Navigation - Dark Theme */
+.container-visi-misi .tabs {
+    display: inline-flex;
+    background: var(--bs-dark); /* Dark background (kebalikan dari white) */
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.08); /* White shadow */
+    margin-bottom: 2rem;
+}
+
+.container-visi-misi .tab {
+    padding: 0.6rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7); /* Light gray text */
+    transition: all 0.3s ease;
+}
+
+.container-visi-misi .tab.active {
+    background-color: var(--bs-white); /* White active tab (kebalikan dari primary) */
+    color: var(--bs-dark); /* Dark text on active tab */
+}
+
+.container-visi-misi .tab:hover:not(.active) {
+    color: var(--bs-white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Tab Content - Dark Cards */
+.container-visi-misi .tab-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: none;
+    animation: fadeIn 0.4s ease;
+    background: var(--bs-dark); /* Dark background (kebalikan dari white) */
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05); /* White shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+.container-visi-misi .tab-content.active {
+    display: block;
+}
+
+/* Hover Effect - White Background */
+.container-visi-misi .tab-content::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .7s;
+    background: linear-gradient(135deg, var(--bs-white) 0%, #f8f9fa 100%); /* White gradient */
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.container-visi-misi .tab-content:hover::before {
+    width: 100%;
+}
+
+.container-visi-misi .tab-content * {
+    position: relative;
+    transition: .5s;
+    z-index: 2;
+}
+
+.container-visi-misi .tab-content:hover h3,
+.container-visi-misi .tab-content:hover p {
+    color: var(--bs-dark) !important; /* Dark text on hover */
+}
+
+.container-visi-misi .tab-content h3 {
+    color: var(--bs-white); /* White headings */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container-visi-misi .tab-content p {
+    color: rgba(255, 255, 255, 0.9); /* Light text */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Icon for each tab content */
+.container-visi-misi .tab-content::after {
+    position: absolute;
+    font-family: "Bootstrap Icons";
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.1);
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.container-visi-misi #visi::after {
+    content: "\F341"; /* bi-eye */
+}
+
+.container-visi-misi #misi::after {
+    content: "\F4A2"; /* bi-list-check */
+}
+
+.container-visi-misi #strategi::after {
+    content: "\F26C"; /* bi-diagram-3 */
+}
+
+.container-visi-misi .tab-content:hover::after {
+    color: rgba(13, 110, 253, 0.2);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-visi-misi {
+        padding: 60px 0;
+    }
+    
+    .container-visi-misi .tabs {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .container-visi-misi .tab {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    
+    .container-visi-misi .tab-content {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .container-visi-misi .tab-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .container-visi-misi .tab-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-visi-misi .tab-content {
+        padding: 25px 15px;
+    }
+    
+    .container-visi-misi .tab-content::after {
+        font-size: 3rem;
+        top: 15px;
+        right: 15px;
+    }
+}
 .back-to-top {
     position: fixed;
     display: none;
@@ -344,8 +535,8 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(3, 27, 78, .3), rgba(3, 27, 78, .3)), url(../img/testimonial.jpg) center center no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(3, 27, 78, .3), rgba(3, 27, 78, .3)), url(../img/taman2.jpeg) center center no-repeat;
+    background-size: fi;
 }
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
@@ -655,6 +846,116 @@
     100% { transform: scale(1); }
 }
 
+.article-header {
+    background: linear-gradient(135deg, #15146c 0%, #2980b9 100%);
+    padding: 4rem 0;
+    margin-bottom: 0;
+}
+
+.article-meta-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.article-content-section {
+    padding: 4rem 0;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #15146c;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.activity-number {
+    background: #15146c;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid #15146c;
+    margin: 2rem 0;
+}
+
+.info-box h4 {
+    color: #15146c;
+    font-weight: bold;
+}
+
+.highlight-text {
+    background: linear-gradient(135deg, #15146c, #2980b9);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, #15146c 0%, #2980b9 100%);
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.registration-links {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.link-button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.link-button:hover {
+    background: white;
+    color: #15146c;
+    transform: translateY(-2px);
+}
+
+.theme-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+    border-left: 5px solid #15146c;
+}
+
 
 .single-article-container {
     max-width: 600px;
@@ -768,7 +1069,7 @@
 }
 /*** Testimonial ***/
 .testimonial {
-    background: linear-gradient(rgba(3, 27, 78, .3), rgba(3, 27, 78, .3)), url(../img/testimonial.jpg) left center no-repeat;
+    background: linear-gradient(rgba(3, 27, 78, .3), rgba(3, 27, 78, .3)), url(../img/taman2.jpeg) left center no-repeat;
     background-size: cover;
 }
 
@@ -828,10 +1129,11 @@
 
 /*** Footer ***/
 .footer {
-    background: linear-gradient(rgba(3, 27, 78, .3), rgba(3, 27, 78, .3)), url(../img/footer.png) center center no-repeat;
-    background-size: contain;
+    background: linear-gradient(rgba(3, 27, 78, .8), rgba(3, 27, 78, .8)), url(../img/footer.png) center center no-repeat;
+    background-size: cover !important; /* Ubah dari 'contain' ke 'cover' */
+    margin: 0 !important;
+    padding: 0 !important;
 }
-
 @media (min-width: 992px) {
     .footer::after {
         position: absolute;

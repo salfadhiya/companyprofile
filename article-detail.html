@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Semarak Kemerdekaan BBPVP Bandung - Detail Artikel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Red+Rose:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .activity-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .activity-image:hover {
+            transform: scale(1.02);
+        }
+
+        .activity-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 1px solid #e9ecef;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .activity-number {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+        }
+
+        .theme-text {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-style: italic;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.2);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            border-left: 4px solid #2196f3;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+
+        .highlight-text {
+            color: #dc3545;
+            font-weight: bold;
+            background: rgba(220, 53, 69, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        }
+
+        .article-meta-info {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 25px;
+            margin: 20px 0;
+            color: white;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
+        }
+
+        .link-button {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin: 5px;
+        }
+
+        .link-button:hover {
+            background: white;
+            color: #dc3545;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+
+        .btn-lg-square {
+            width: 48px;
+            height: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 d-none d-lg-flex">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Brand Start -->
+    <div class="container-fluid bg-white text-brand pt-4 pb-5 d-none d-lg-flex">
+        <div class="container pb-2">
+            <div class="d-flex align-items-center justify-content-between">
+               <a href="index.html" class="logo-link">
+                    <img src="img/logo.png" alt="BBPVP Bandung Logo" class="logo-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Brand End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <img src="img/logo.png" alt="BBPVP Bandung Logo" style="height: 60px;">
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link">Beranda</a>
+                        <a href="about.html" class="nav-item nav-link">Tentang</a>
+                        <a href="service.html" class="nav-item nav-link">Program</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
+                            <div class="dropdown-menu bg-light m-0">
+                                <a href="feature.html" class="dropdown-item">Pelatihan Otomotif</a>
+                                <a href="team.html" class="dropdown-item">Pelatihan Manufaktur</a>
+                                <a href="testimonial.html" class="dropdown-item">Pelatihan Refrigerasi</a>
+                                <a href="appoinment.html" class="dropdown-item">Pelatihan TIK</a>
+                                <a href="404.html" class="dropdown-item">Sertifikasi</a>
+                            </div>
+                        </div>
+                        <a href="article.html" class="nav-item nav-link active">Artikel</a>
+                    </div>
+                   <div class="ms-auto d-none d-lg-flex">
+                        <a class="btn btn-sm-square btn-primary ms-2" 
+                        href="https://www.instagram.com/bbpvp_bandung/?hl=en" 
+                        target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a class="btn btn-sm-square btn-primary ms-2" 
+                        href="https://www.youtube.com/@bbpvp_bandung295" 
+                        target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <a class="btn btn-sm-square btn-primary ms-2" 
+                        href="https://www.tiktok.com/@bbpvp_bandung" 
+                        target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Article Detail Header Start -->
+    <div class="container-fluid article-header">
+        <div class="container text-center py-5 mt-4">
+            <h1 class="display-4 text-white mb-3 animated slideInDown">15 Agustus 2025, BBPVP Bandung Hadirkan Semarak Kemerdekaan Penuh Kegiatan Seru!</h1>
+            <div class="article-meta-info">
+                <span class="me-3"><i class="fa fa-calendar me-2"></i>15 Agustus 2025</span>
+                <span class="me-3"><i class="fa fa-map-marker-alt me-2"></i>BBPVP Bandung</span>
+                <span class="me-3"><i class="fa fa-clock me-2"></i>07:00 - 16:00 WIB</span>
+                <span><i class="fa fa-user me-2"></i>Admin BBPVP</span>
+            </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-4">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="article.html" class="text-white">Artikel</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Detail</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Article Detail Header End -->
+
+    <!-- Article Content Start -->
+    <div class="container-fluid article-content-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    
+                    <!-- Featured Image -->
+                    <div class="mb-4">
+                        <img src="img/article1.jpg" class="img-fluid rounded" alt="Semarak Kemerdekaan BBPVP Bandung" style="width: 100%; height: 400px; object-fit: cover;">
+                    </div>
+
+                    <!-- Article Tags -->
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            <i class="fa fa-tag me-1"></i>Acara Khusus
+                        </span>
+                        <span class="badge bg-dark me-2" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            <i class="fa fa-tag me-1"></i>Kemerdekaan
+                        </span>
+                        <span class="badge bg-info" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            <i class="fa fa-tag me-1"></i>Pelatihan Vokasi
+                        </span>
+                    </div>
+
+                    <!-- Theme Quote -->
+                    <div class="theme-text">
+                        <i class="fa fa-quote-left me-2"></i>
+                        "80 Tahun Merdeka, 78 Tahun Berkarya: BBPVP Bandung, Tempat Tumbuh Bersama"
+                        <i class="fa fa-quote-right ms-2"></i>
+                    </div>
+
+                    <!-- Event Info Box -->
+                    <div class="info-box">
+                        <h4><i class="fa fa-info-circle me-2"></i>Informasi Acara</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>Tanggal:</strong> Jumat, 15 Agustus 2025</p>
+                                <p class="mb-2"><strong>Waktu:</strong> 07.00 - 16.00 WIB</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>Lokasi:</strong> Jl. Gatot Subroto No. 170, Bandung</p>
+                                <p class="mb-0"><strong>Biaya:</strong> <span class="highlight-text">GRATIS</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article Content -->
+
+                    <p>Dalam rangka memperingati Hari Kemerdekaan Republik Indonesia yang ke-80, Balai Besar Pelatihan Vokasi dan Produktivitas (BBPVP) Bandung menggelar acara <strong>Semarak Kemerdekaan - Pelatihan Vokasi 2025</strong>. Acara ini terbuka untuk masyarakat umum dan digelar GRATIS. Kegiatan ini dirancang tidak hanya untuk memeriahkan momen kemerdekaan, tetapi juga menjadi ajang edukasi, pelatihan, dan kebersamaan bagi warga Bandung dan sekitarnya.</p>
+
+                    <h3 class="mt-5 mb-4">4 Kegiatan Utama dalam Acara</h3>
+
+                    <!-- Activity 1 -->
+                    <div class="activity-card">
+                        <div class="activity-number">1</div>
+                        <img src="img/servismotor.jpg" 
+                             alt="Servis Motor Gratis" class="activity-image">
+                        <h4 class="mb-3">Servis Gratis Motor Ojek Online</h4>
+                        <p>Kegiatan pertama yang menjadi sorotan adalah <strong>servis gratis motor khusus untuk pengemudi ojek online</strong>. Program ini disiapkan untuk <strong>25 pendaftar pertama</strong> sebagai bentuk apresiasi atas dedikasi para pengemudi yang setiap hari membantu mobilitas masyarakat.</p>
+                        <p>Servis gratis ini meliputi pengecekan umum, penggantian oli (jika diperlukan), serta konsultasi ringan terkait perawatan kendaraan. Dengan kondisi motor yang prima, diharapkan para pengemudi dapat bekerja dengan lebih aman dan nyaman.</p>
+                        <div class="alert alert-warning">
+                            <i class="fa fa-exclamation-triangle me-2"></i>
+                            <strong>Tips:</strong> Jangan tunda mendaftar, karena kuota terbatas!
+                        </div>
+                    </div>
+
+                    <!-- Activity 2 -->
+                    <div class="activity-card">
+                        <div class="activity-number">2</div>
+                        <img src="img/wordskills.jpg" 
+                             alt="Demo World Skills ASEAN" class="activity-image">
+                        <h4 class="mb-3">Demo Peserta World Skills ASEAN 2025</h4>
+                        <p>Salah satu kegiatan yang jarang ditemui di acara publik adalah <strong>demonstrasi keterampilan oleh peserta World Skills ASEAN 2025</strong>, khususnya di bidang <strong>Automobile Technology</strong>.</p>
+                        <p>World Skills ASEAN adalah ajang kompetisi keterampilan tingkat Asia Tenggara yang mempertemukan para talenta muda terbaik di bidang vokasi. Di sini, pengunjung akan melihat langsung bagaimana para peserta melakukan perbaikan kendaraan dengan teknik dan standar internasional.</p>
+                        <p>Bagi pelajar, mahasiswa, atau pecinta otomotif, kegiatan ini bisa menjadi inspirasi dan motivasi untuk mengembangkan keterampilan di bidang teknik otomotif.</p>
+                    </div>
+
+                    <!-- Activity 3 -->
+                    <div class="activity-card">
+                        <div class="activity-number">3</div>
+                        <img src="img/trialclass.jpg" 
+                             alt="Trial Class Pelatihan" class="activity-image">
+                        <h4 class="mb-3">Trial Class Pelatihan Unggulan BBPVP Bandung</h4>
+                        <p>Penasaran seperti apa suasana belajar di BBPVP Bandung? Melalui <strong>trial class</strong>, masyarakat dapat mencoba langsung berbagai pelatihan unggulan yang ada di sini, mulai dari teknik, teknologi, hingga keterampilan penunjang lainnya.</p>
+                        <p>Trial class ini dirancang untuk memberikan gambaran singkat namun berkesan tentang metode pembelajaran, fasilitas, dan kualitas instruktur di BBPVP Bandung. Cocok bagi siapa saja yang ingin mempertimbangkan mengikuti pelatihan secara penuh di masa depan.</p>
+                    </div>
+
+                    <!-- Activity 4 -->
+                    <div class="activity-card">
+                        <div class="activity-number">4</div>
+                        <img src="img/senamsehat.jpg" 
+                             alt="Senam Sehat Bersama" class="activity-image">
+                        <h4 class="mb-3">Senam Sehat Bersama + Doorprize Menarik</h4>
+                        <p>Tak lengkap rasanya perayaan kemerdekaan tanpa kegiatan yang melibatkan seluruh kalangan. Oleh karena itu, BBPVP Bandung mengadakan <strong>senam sehat bersama</strong> di area acara.</p>
+                        <p>Selain menjadi momen untuk menjaga kebugaran, kegiatan ini juga akan dimeriahkan dengan <strong>doorprize menarik</strong>. Hadiah-hadiah tersebut disiapkan sebagai bentuk apresiasi bagi para peserta yang ikut memeriahkan suasana. Jadi, ajak keluarga, teman, atau rekan kerja untuk bergerak bersama sambil berkesempatan membawa pulang hadiah!</p>
+                    </div>
+
+                    <!-- Why Attend Section -->
+                    <div class="info-box">
+                        <h4>Mengapa Harus Hadir di Semarak Kemerdekaan BBPVP Bandung?</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="mb-0">
+                                    <li><strong>Gratis dan terbuka untuk umum</strong> - Semua kegiatan tidak dipungut biaya</li>
+                                    <li><strong>Bermanfaat</strong> - Mendapat pengetahuan baru, inspirasi, dan layanan langsung</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="mb-0">
+                                    <li><strong>Networking</strong> - Bertemu dengan orang-orang yang memiliki minat di bidang pelatihan vokasi</li>
+                                    <li><strong>Suasana kekeluargaan</strong> - Cocok untuk semua kalangan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="cta-section text-center">
+                        <div class="container">
+                            <h3 class="text-white mb-4">Jangan lewatkan! Mari kita belajar, berolahraga, dan merayakan kemerdekaan bersama di BBPVP Bandung!</h3>
+                            <div class="registration-links">
+                                <h5 class="text-white mb-3">Link Pendaftaran:</h5>
+                                <a href="https://bit.ly/ServGratis-BBPVPbdg2025" class="link-button me-3" target="_blank">
+                                    <i class="fa fa-wrench me-2"></i>Servis Gratis Motor
+                                </a>
+                                <a href="https://bit.ly/TrialClass_BBPVPbdg_2025" class="link-button" target="_blank">
+                                    <i class="fa fa-graduation-cap me-2"></i>Trial Class
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Share & Navigation -->
+                    <div class="row mt-5 pt-4" style="border-top: 1px solid #eee;">
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Bagikan Artikel:</h6>
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-primary btn-sm me-2" style="border-radius: 20px;">
+                                    <i class="fab fa-facebook-f me-1"></i>Facebook
+                                </a>
+                                <a href="#" class="btn btn-info btn-sm me-2" style="border-radius: 20px;">
+                                    <i class="fab fa-twitter me-1"></i>Twitter
+                                </a>
+                                <a href="#" class="btn btn-success btn-sm" style="border-radius: 20px;">
+                                    <i class="fab fa-whatsapp me-1"></i>WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a href="article.html" class="btn btn-outline-primary" style="border-radius: 20px;">
+                                <i class="fa fa-arrow-left me-2"></i>Kembali ke Daftar Artikel
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Article Content End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer position-relative bg-dark text-white-50 py-5 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-6 pe-lg-5">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo-white.png" alt="" style="height: 150px; margin-bottom: 50px;">
+                    </a>
+                    <p class="fs-5 mb-4">Balai Besar Pelatihan Vokasi dan Produktivitas Bandung - Kementerian Ketenagakerjaan Republik Indonesia. Mengembangkan kompetensi tenaga kerja Indonesia melalui pelatihan berkualitas.</p>
+                    <p><i class="fa fa-map-marker-alt me-2"></i>Jl. Gatot Subroto No.170</p>
+                    <p><i class="fa fa-phone-alt me-2"></i>(022) 4264265</p>
+                    <p><i class="fa fa-envelope me-2"></i>info@bbpvpbandung.kemnaker.go.id</p>
+                    <div class="d-flex mt-4">
+                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="row g-5">
+                        <div class="col-sm-6">
+                            <h4 class="text-light mb-4">Link Cepat</h4>
+                            <a class="btn btn-link" href="">Tentang Kami</a>
+                            <a class="btn btn-link" href="">Kontak Kami</a>
+                            <a class="btn btn-link" href="">Program Pelatihan</a>
+                            <a class="btn btn-link" href="">Syarat & Ketentuan</a>
+                            <a class="btn btn-link" href="">Dukungan</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4 class="text-light mb-4">Program Populer</h4>
+                            <a class="btn btn-link" href="">Teknisi Otomotif</a>
+                            <a class="btn btn-link" href="">Operator Mesin CNC</a>
+                            <a class="btn btn-link" href="">Teknisi Refrigerasi</a>
+                            <a class="btn btn-link" href="">Pemrograman</a>
+                            <a class="btn btn-link" href="">Sertifikasi Profesi</a>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4 class="text-light mb-4">Newsletter</h4>
+                            <div class="w-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-0 py-3 px-4" style="background: rgba(255, 255, 255, .1);" placeholder="Alamat Email Anda"><button class="btn btn-primary px-4">Berlangganan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; <a href="#">BBPVP Bandung</a>. Hak Cipta Dilindungi.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Kementerian Ketenagakerjaan Republik Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
